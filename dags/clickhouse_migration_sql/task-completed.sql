@@ -1,0 +1,1 @@
+select 'task succesfully completed', now()
