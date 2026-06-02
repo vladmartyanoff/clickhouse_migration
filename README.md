@@ -1,0 +1,2 @@
+# clickhouse_migration
+moving_db_weather_inf_to_clickhouse
