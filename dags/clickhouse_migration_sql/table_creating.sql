@@ -1,9 +1,13 @@
-create table if not exists amplitude_weather (
-	id serial primary key,
-	city_name varchar(50),
-	temperature float,
-	pressure float,
-	humidity float,
-	timestamp timestamp,
-	created_at date default now()
+CREATE DATABASE IF NOT EXISTS analytics;
+create table if not exists city_weather_data_ch (
+	id UInt64,
+	city_name String,
+	temperature Float32,
+	pressure Float32,
+	humidity Float32,
+	timestamp DateTime,
+	updated_at DateTime default now()
 )
+Engine = ReplacingMergeTree(updated_at)
+Primary Key (id)
+ORDER BY id;
