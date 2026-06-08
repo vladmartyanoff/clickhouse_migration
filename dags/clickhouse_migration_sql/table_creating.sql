@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS analytics;
-create table if not exists city_weather_data_ch (
+
+create table if not exists analytics.city_weather_data_ch (
 	id UInt64,
 	city_name String,
 	temperature Float32,
